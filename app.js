@@ -47,8 +47,8 @@ function  animatePress(currentColour){
     }, 100)
 }
 
-// Use jQuery to detect when a keyboard key has been pressed, when that happens for the first time, call nextSequence().
-$(document).keypress(function() {
+// Use jQuery to detect when h1 has been clicked, when that happens for the first time, call nextSequence().
+$("h1").click(function() {
     if (!started) {
 //The h1 title starts out saying "Press A Key to Start", when the game has started, change this to say "Level 0"
     $("#level-title").text("Level " + level);
@@ -71,7 +71,7 @@ function checkAnswer(currentLevel){
         }
     }
     else{
-        $("#level-title").text("Game Over, Press Any  Key to Start");
+        $("#level-title").text("Game Over, Click Me to Start");
         $("body").addClass("game-over");
         setTimeout(function(){
             $("body").removeClass("game-over");
