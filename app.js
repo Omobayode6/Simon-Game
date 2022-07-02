@@ -47,16 +47,20 @@ function  animatePress(currentColour){
     }, 100)
 }
 
+
 // Use jQuery to detect when h1 has been clicked, when that happens for the first time, call nextSequence().
 $("h1").click(function() {
     if (!started) {
 //The h1 title starts out saying "Press A Key to Start", when the game has started, change this to say "Level 0"
     $("#level-title").text("Level " + level);
     $("#para").addClass("hidden");
+    $("#level-title").addClass("gap");
       nextSequence();
       started = true;
     }
   });
+
+  
 
 function checkAnswer(currentLevel){
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]){
